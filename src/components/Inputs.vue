@@ -2,7 +2,7 @@
   <div class="inputs">
     <h3>Edit Number:</h3>
     <input type="number" v-model="store.count" />
-    <h3>Change +/- Increaser/Decreaser:</h3>
+    <h3 class="increaser">Change +/- Increaser/Decreaser:</h3>
     <input type="number" v-model="store.num" />
   </div>
 </template>
@@ -38,6 +38,11 @@ const store = useCounterStore();
 @media (min-width: 1000px) {
   .inputs input {
     width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .increaser {
+    font-size: 1.5rem;
   }
 }
 </style>
